@@ -2,13 +2,13 @@
 
 import re
 
-# AccountMgr.h: MAX_ACCOUNT_STR 17, MAX_PASS_STR 16. Both caps below stay under those.
-ACCOUNT_RE = re.compile(r"[A-Za-z0-9]{3,16}")
+# AccountMgr.h: MAX_ACCOUNT_STR 17, MAX_PASS_STR 16. Lengths below match those limits exactly.
+ACCOUNT_RE = re.compile(r"[A-Za-z0-9]{1,17}")
 # No spaces (the console splits arguments on them), no % or braces (format strings), and no XML specials.
-PASSWORD_RE = re.compile(r"[A-Za-z0-9!@#$*_.-]{6,16}")
+PASSWORD_RE = re.compile(r"[A-Za-z0-9!@#$*_.-]{1,16}")
 
-ACCOUNT_RULE = "3 to 16 letters or digits."
-PASSWORD_RULE = "6 to 16 characters: letters, digits, or ! @ # $ * _ . -"
+ACCOUNT_RULE = "1 to 17 letters or digits."
+PASSWORD_RULE = "1 to 16 characters: letters, digits, or ! @ # $ * _ . -"
 
 
 def validate_account(name: str) -> str | None:

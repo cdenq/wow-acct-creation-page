@@ -1,4 +1,4 @@
-"""TofuTemple signup page. Run with: uv run streamlit run app.py"""
+"""Tofu Worldview signup page. Run with: uv run streamlit run app.py"""
 
 import hmac
 import logging
@@ -40,9 +40,9 @@ cfg = get_config()
 limits = get_limits(cfg.invite_max_fails, cfg.creates_per_hour)
 log = get_logger()
 
-st.set_page_config(page_title="TofuTemple signup", page_icon="🍥")
+st.set_page_config(page_title="Tofu Worldview signup", page_icon="🍥")
 st.image(str(Path(__file__).parent / "assets" / "tofu.png"), width=120)
-st.title("TofuTemple account signup")
+st.title("Tofu Worldview account signup")
 
 if cfg.debug:
     st.warning("Debug mode is on: raw SOAP responses are shown. Turn it off before sharing the page.")

@@ -1,0 +1,7 @@
+# Localhost only until the HTTPS/tunnel decision is made. Change address deliberately, never to expose SOAP.
+[server]
+address = "127.0.0.1"
+port = 8501
+
+[browser]
+gatherUsageStats = false
